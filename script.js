@@ -3,35 +3,34 @@ var timer = 120;
 startTimer();
 
 var score = 0;
-// var questionList = [
-//     {
-//         question: "The correct answer is b",
-//         answers: {
-//             a: "Wrong",
-//             b: "Right",
-//             c: "Wrong"
-//         },
-//         correctAnswer: "b"
-//     },
-//     {
-//         question: "The correct answer is a",
-//         answers: {
-//             a: "Right",
-//             b: "Wrong",
-//             c: "Wrong"
-//         },
-//         correctAnswer: "a"
-//     },
-//     {
-//         question: "The correct answer is c",
-//         answers: {
-//             a: "wrong",
-//             b: "wrong",
-//             c: "Right"
-//         },
-//         correctAnswer: "c"
-//     }
-// ];
+//booleans
+
+var questionList = {
+        questionOne: "The correct answer is b",
+        answersOne: {
+            a: "the nile",
+            b: "the cuyahoga",
+            c: "Wrong"
+        },
+        correctAnswerOne: "b",
+        questionTwo: "The correct answer is a",
+        answers: {
+            a: "Right",
+            b: "Wrong",
+            c: "Wrong"
+        },
+        correctAnswer: "a",
+        questionThree: "The correct answer is c",
+        answers: {
+            a: "wrong",
+            b: "wrong",
+            c: "Right"
+        },
+        correctAnswer: "c"
+};
+
+//questionList.answersOne.a would give you the nile
+
 setScore();
 // askQuestion();
 function startTimer() {
