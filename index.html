@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Coding Quiz</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4" id="timer"></h1>
-            </div>
-          </div>
-        <div id="quiz-question">
+
+<head>
+  <title>Coding Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-center" id="timer"></h1>
+    </div>
+  </div>
+  <div class="text-center start-screen">
+    <button class="btn btn-primary btn-lg" id="start">Start</button>
+  </div>
+  <div class="text-center quiz-container">
+    <div class="card">
+      <h4 class="card-header" id="questions"></h4>
+      <div class="card-body">
+        <div class="choices" id="choices"></div>
+        <div id="feedback">
+
         </div>
-        <div id="question-result">
-        </div>
-      <form id="initial-form" method="POST">
-        <label for="initial-text">Enter your initials!</label>
-        <input type="text" placeholder="Initials!" name="todo-text" id="intials-text" />
-      </form>
-    </body>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" id="end-screen">
+    <div id="final-score"></div>
+    <p>
+      Enter initials: <input type="text" id="initials" max="3">
+      <button class="btn btn-success" id="submit">Submit</button>
+    </p>
+    <div id="score-result">
+      <ul></ul>
+    <button class="btn btn-lg btn-danger" id="clear">Clear</button>
+    </div>
+  </div>
+</body>
+
 </html>
