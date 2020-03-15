@@ -127,10 +127,12 @@ $(document).ready(function () {
           highscores.push(newScore);
           window.localStorage.setItem("highscores", JSON.stringify(highscores));
         }
+        $("#saved").text("Your initials have been saved!");
     }
     function checkForEnter(event) {
         if (event.key === "Enter") {
             saveHighScore();
+            $("#saved").text("Your initials have been saved!");
         }
     }
     $("#submit").click(saveHighScore);
@@ -146,11 +148,11 @@ $(document).ready(function () {
         });
       
         highscores.forEach(function(score) {
-           // create li tag for each high score
+           // create li tag for each high score, couldn't get it to work using jquery
         var liTag = document.createElement("li");
         liTag.textContent = score.initials + " - " + score.score;
-        // display on page
-        var olEl = document.getElementById("highscores");
+        // display on page, also couldn't get this to work with jquery
+        var olEl = document.getElementById("score-result");
         olEl.appendChild(liTag);
         });
       }
@@ -159,10 +161,7 @@ $(document).ready(function () {
         window.localStorage.removeItem("highscores");
         window.location.reload();
       }
-      
       document.getElementById("clear").onclick = clearHighscores;
-      
-      // run function when page loads
       printHighscores();
       
 })
