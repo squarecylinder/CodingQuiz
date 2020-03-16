@@ -76,7 +76,6 @@ $(document).ready(function () {
     }
     function questionClick() {
         //answer validation
-            console.log(this.value);
         if (this.value != questions[currentQuestionIndex].answer) {
             //subtract time
             time -= 15;
